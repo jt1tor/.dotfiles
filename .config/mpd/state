@@ -2,8 +2,8 @@ sw_volume: 92
 audio_device_state:1:MPD - PipeWire
 audio_device_state:1:toggle_visualizer
 state: play
-current: 2
-time: 120.286
+current: 9
+time: 120.263
 random: 1
 repeat: 1
 single: 0
