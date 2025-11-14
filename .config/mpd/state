@@ -1,0 +1,26 @@
+sw_volume: 92
+audio_device_state:1:MPD - PipeWire
+audio_device_state:1:toggle_visualizer
+state: play
+current: 2
+time: 120.286
+random: 1
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: 
+playlist_begin
+0:2013 - Yeezus/01 - On Sight.flac
+1:2013 - Yeezus/02 - Black Skinhead.flac
+2:2013 - Yeezus/03 - I Am A God.flac
+3:2013 - Yeezus/04 - New Slaves.flac
+4:2013 - Yeezus/05 - Hold My Liquor (feat. Chief Keef & Justin Vernon).flac
+5:2013 - Yeezus/06 - I'm In It.flac
+6:2013 - Yeezus/07 - Blood On The Leaves.flac
+7:2013 - Yeezus/08 - Guilt Trip (feat. Kid Cudi).flac
+8:2013 - Yeezus/09 - Send It Up (feat. King L).flac
+9:2013 - Yeezus/10 - Bound 2.flac
+playlist_end
