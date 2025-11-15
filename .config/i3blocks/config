@@ -8,10 +8,10 @@ full_text="  "
 align=center
 color=#f3f4f5
 separator=true
-interval=5
+interval=1
 
 [sb-music]
-interval=5
+interval=1
 signal=11
 markup=pango
 
@@ -57,12 +57,12 @@ signal=8
 
 [sb-pulsevol]
 signal=10
-interval=5
+interval=1
 separator=false
 
 [sb-pulsevol]
 signal=10
-interval=5
+interval=1
 instance=default-source
 
 #[sb-weather]
@@ -75,7 +75,7 @@ separator=false
 
 [sb-time]
 command=date '+%H:%M:%S'
-interval=5
+interval=1
 separator=false
 separator_block_width=5
 

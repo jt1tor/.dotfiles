@@ -302,8 +302,8 @@ set $mode_system   [L]OCK   LOG[O]UT   [S]USPEND   [R]EBOOT   [P]
 mode "$mode_system" {
 	bindsym l exec --no-startup-id sysact lock, mode "default"
 	bindsym s exec --no-startup-id sysact suspend, mode "default"
-	bindsym r exec --no-startup-id sysact reboot, mode "default"
-	bindsym p exec --no-startup-id sysact poweroff, mode "default"
+	bindsym r exec --no-startup-id reboot, mode "default"
+	bindsym p exec --no-startup-id poweroff, mode "default"
 	bindsym h exec --no-startup-id sysact hibernate, mode "default"
 
 	# Exit/Reload/Restart i3
@@ -379,8 +379,8 @@ for_window [class="(?i)anki" title="^Card Types for "]		floating disable
 for_window [class="(?i)anki" title="^Options for "]		floating disable
 for_window [class="(?i)org.gnome.DejaDup"]			floating disable
 #for_window [class="(?i)Telegram" ]				floating disable
-for_window [class="kitty"] floating enable, resize set 600 400, move position center
-for_window [class="Anki"] floating enable, resize set 700 700, move position center
+for_window [class="kitty"] floating enable, resize set 550 450, move position center
+for_window [class="Anki"] floating enable, resize set 850 750, move position center
 
 ###############################################################################
 # Extra XF86 Keys
