@@ -1,0 +1,42 @@
+#!/bin/sh
+
+notify_pacman_i3_block() {
+	pkill -RTMIN+8 "${STATUSBAR:-i3blocks}"
+}
+
+pac_upgrade() {
+	if command -v pacapt >/dev/null 2>&1; then
+		# On Ubuntu, pacapt can be used to upgrade system packages.
+		# Snap is heavily utilized on Ubuntu. Upgrade snap packages as well.
+		sudo pacapt -Syu
+		sudo snap refresh
+	elif pacman -Qq trizen >/dev/null; then
+		trizen -Syu
+	elif pacman -Qq paru >/dev/null; then
+		paru -Syu
+	else
+		sudo pacman -Syu
+	fi
+}
+
+pipx_upgrade() {
+	if command -v pipx >/dev/null 2>&1; then
+		pipx upgrade-all
+	fi
+}
+
+if ! command -v pacapt >/dev/null 2>&1; then
+	archnews || exit 1
+fi
+
+echo "Beginning upgrade."
+pac_upgrade
+notify_pacman_i3_block
+remaps
+pipx_upgrade
+echo "Upgrade complete."
+
+if [ "$1" != "--no-wait" ]; then
+	echo "Press <Enter> to exit window."
+	read -r _
+fi

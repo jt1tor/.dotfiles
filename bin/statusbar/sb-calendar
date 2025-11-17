@@ -1,0 +1,30 @@
+#!/bin/bash
+
+date '+%b %d (%a)'
+date '+%d.%m'
+
+mark_weekend() {
+	sed \
+		-e 's|Su|<span color="red">&</span>|' \
+		-e 's|Sa|<span color="lightblue">&</span>|'
+}
+
+mark_day() {
+	sed \
+		-e "s/..7m/<b><span color=\"white\">/;" \
+		-e "s/..0m/<\/span><\/b>/;"
+}
+
+show_cal() {
+	cal -m -c1 -3 --color=always | mark_weekend | mark_day
+}
+
+case $BLOCK_BUTTON in
+	1)
+		notify-send Calendar "$(show_cal)"
+		command -v calcurse && notify-send "Appointments" "$(calcurse -D ~/.config/calcurse -d3)" ;;
+	2)
+		setsid -f i3-sensible-terminal -e 'calcurse -D ~/.config/calcurse' & ;;
+	6)
+		setsid -f i3-sensible-terminal -e "$EDITOR" "$0" ;;
+esac

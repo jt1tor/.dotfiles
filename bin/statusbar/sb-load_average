@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+list_cpu_hogs() {
+	ps axch -o cmd,%cpu |
+		awk '{cmd[$1]+=$2} END {for (i in cmd) print i, cmd[i]}' |
+		sort -nrk2  |
+		head
+}
+
+notify_hogs() {
+	notify-send "CPU hogs" "$(list_cpu_hogs)\\n(100% per core)"
+}
+
+if [[ $BLOCK_BUTTON == 1 ]]; then
+	notify_hogs
+fi
+
+readonly load=$(cut -f1 -d' ' /proc/loadavg)
+
+echo "AVG $load"
+echo " $load"
+awk "-vl=$load" "-vn=$(nproc)" 'BEGIN{if(l>n){exit(33);}}'
