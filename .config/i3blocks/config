@@ -1,12 +1,10 @@
-## i3blocks config file
-
 # Global properties
 command=~/.local/bin/statusbar/$BLOCK_NAME
 separator_block_width=14
 markup=none
 full_text="  "
 align=center
-color=#f3f4f5
+color=#ebdbb2
 separator=true
 interval=1
 
@@ -14,18 +12,22 @@ interval=1
 interval=1
 signal=11
 markup=pango
+color=#83a598
 
 [sb-memory]
 separator=false
 interval=15
+color=#458588
 
 [sb-memory]
 instance=swap
 interval=15
+color=#b16286
 
 [sb-disk]
 instance=/home
 interval=30
+color=#d3869b
 
 #[sb-nettraf]
 #interval=5
@@ -45,6 +47,7 @@ interval=30
 chip_label=CPU
 query=sensors coretemp-isa-0000 | awk '/^Package/ {print $4}'
 interval=5
+color=#cc241d
 
 #[chip_temp]
 #chip_label=GPU
@@ -54,30 +57,35 @@ interval=5
 [sb-pacpackages]
 interval=3600
 signal=8
+color=#fb4934
 
 [sb-pulsevol]
 signal=10
 interval=1
 separator=false
+color=#d79921
 
 [sb-pulsevol]
 signal=10
 interval=1
 instance=default-source
+color=#fabd2f
 
-#[sb-weather]
-#interval=1800
-#command=curlwttr "$LOCATION?format=1" || echo '±?°C'
+[sb-weather]
+interval=1
+command=curlwttr '$LOCATION?format=%t'
 
 [sb-calendar]
 interval=30
 separator=false
+color=#98971a
 
 [sb-time]
 command=date '+%H:%M:%S'
 interval=1
 separator=false
 separator_block_width=5
+color=#b8bb26
 
 #[sb-record]
 #command=cat /tmp/recordingicon 2>/dev/null || echo
