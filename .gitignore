@@ -1,0 +1,10 @@
+# Unnecessary
+/mpd/state
+/mpd/database
+/mpd/sticker.sql
+/mpv/memo-history.log
+/ncmpcpp/error.log
+/newsboat/urls
+/zsh/.zsh_history
+/fcitx
+/mozc

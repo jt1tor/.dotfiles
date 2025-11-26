@@ -1,26 +1,20 @@
 ###############################################################################
 # Basic Definitions
 ###############################################################################
-# Mod1 = 'Alt', Mod4 = 'strange wiggly flag' key
 set $alt		Mod1
 set $super		Mod4
 
-# Main modifier
 set $mod		Mod4
 
-# Home row direction keys, like vim
 set $left		h
 set $down		j
 set $up			k
 set $right		l
 
-# Applications
 set $term		kitty
 set $explorer		kitty -e yazi
 set $browser		librewolf
 
-# Customize workspace names
-# http://fontawesome.io/cheatsheet/
 set $ws1		 "1: 壱 "
 set $ws2		 "2: 弐 "
 set $ws3		 "3: 参 "
@@ -32,28 +26,16 @@ set $ws8		 "8: 捌 "
 set $ws9		 "9: 玖 "
 set $ws10		"10: 拾 "
 
-# rofi dmenu:
 set $dmenu		exec rofi -show drun
 
-# Drag floating windows by holding down $mod and left mouse button.
-# Resize them with right mouse button + $mod.
-# Despite the name, also works for non-floating windows.
 floating_modifier $mod
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
 font pango:		IntelOneMono, IPAexGothic, FontAwesome 10
 
-# Hide a bar showing where the next window should appear
-# The "smart" setting hides borders on workspaces with only one window visible,
-# but keeps them on workspaces with multiple windows visible. Default is none.
-# Syntax: hide_edge_borders none|vertical|horizontal|both|smart
 hide_edge_borders	smart
 
-# Window focus follows mouse movements by default
 focus_follows_mouse	yes
 
-# Border style for new windows
 default_border          normal 1
 default_floating_border	normal 1
 
@@ -65,10 +47,10 @@ exec --no-startup-id flameshot
 exec --no-startup-id ./.fehbg
 exec --no-startup-id xset r rate 150 50
 exec --no-startup-id fcitx
+exec --no-startup-id easyeffects -w --service-mode
 
 ###############################################################################
 # Colors
-# More color schemes: https://github.com/khamer/base16-i3
 ###############################################################################
 set $black	  #282828
 set $darkgray	  #928374
@@ -87,18 +69,16 @@ set $aqua	  #8ec07c
 set $lightgray	  #a89984
 set $white	  #ebdbb2
 
-#                       BORDER		BACKGROUND	TEXT		INDICATOR       CHILD_BORDER
-client.focused		$blue		$blue		$black		$white		$blue
-client.unfocused	$black		$black		$white		$darkblue	$black
-client.focused_inactive	$darkgray	$darkgray	$white		$darkblue	$darkgray
-client.urgent		$darkred	$darkred	$darkgray	$darkred	$darkred
-client.background	$darkgray
+#                         BORDER	  	BACKGROUND	TEXT		    INDICATOR   CHILD_BORDER
+client.focused            $blue		    $blue	     	$black    	$white	  	$blue
+client.unfocused          $black	  	$black	   	$white	  	$darkblue	  $black
+client.focused_inactive 	$darkgray  	$darkgray  	$white	  	$darkblue  	$darkgray
+client.urgent             $darkred  	$darkred  	$darkgray  	$darkred  	$darkred
+client.background	        $darkgray
 
 ###############################################################################
 # status bar
 ###############################################################################
-
-# Start i3bar to display a workspace bar
 bar {
         colors {
 		background #282828
@@ -124,64 +104,43 @@ bar {
 ###############################################################################
 # Bindings
 ###############################################################################
-
-# Start a terminal
-# i3-sensible-terminal launches $TERMINAL with fallbacks
 bindsym $mod+Return 		exec $term
 
-# Kill focused window / Force close window
-# Make it impossible to accidentally kill dropdowns
 bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 bindsym $mod+Shift+q		kill
 
-# Switch the current container between different layout styles
 bindsym $mod+s			layout stacking
 bindsym $mod+w			layout tabbed
 bindsym $mod+e			layout toggle split
 
-# You can "split" the current object of your focus with $mod+b or $mod+v,
-# for horizontal and vertical splits respectively.
-# Split in horizontal orientation
 bindsym $mod+Shift+backslash	splith
-# Split in vertical orientation
 bindsym $mod+v			splitv
 
-# Sticky floating windows (stay on screen even if you switch to another workspace)
 bindsym $mod+o			sticky toggle
 
-# Move focus to the parent/child container
 bindsym $mod+a			focus parent
 bindsym $mod+Shift+a		focus child
 
-# Toggle window border
 bindsym $mod+Shift+w		border toggle
 
-# Resize bindings
 bindsym $mod+ctrl+h		resize shrink width  10 px or 10 ppt
 bindsym $mod+ctrl+j		resize grow   height 10 px or 10 ppt
 bindsym $mod+ctrl+k		resize shrink height 10 px or 10 ppt
 bindsym $mod+ctrl+l		resize grow   width  10 px or 10 ppt
 
-# Start the program launcher
 bindsym $mod+d	$dmenu
 
-# Swap focus between the tiling area and the floating area
 bindsym $mod+space			focus mode_toggle
 
-# enter fullscreen
 bindsym $mod+f	fullscreen toggle
 
-# Toggle the bar
 bindsym $mod+b			bar mode toggle
 
-# Newsboat / Ncmpcpp
 bindsym $mod+n			exec $term -e newsboat && pkill -RTMIN+6 i3blocks
 bindsym $mod+Shift+n		exec --no-startup-id $term -e ncmpcpp -s playlist
 
-# Hover: move window to hover
 bindsym $mod+Shift+space	floating toggle
 
-# switch to workspace
 bindsym $mod+1		workspace $ws1
 bindsym $mod+2		workspace $ws2
 bindsym $mod+3		workspace $ws3
@@ -193,7 +152,6 @@ bindsym $mod+8		workspace $ws8
 bindsym $mod+9		workspace $ws9
 bindsym $mod+0		workspace $ws10
 
-# move focused container to workspace
 bindsym $mod+Shift+1	move container to workspace $ws1
 bindsym $mod+Shift+2	move container to workspace $ws2
 bindsym $mod+Shift+3	move container to workspace $ws3
@@ -205,95 +163,67 @@ bindsym $mod+Shift+8	move container to workspace $ws8
 bindsym $mod+Shift+9	move container to workspace $ws9
 bindsym $mod+Shift+0	move container to workspace $ws10
 
-# Reload the configuration file
 bindsym $mod+F5		reload
 
-# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+F5	restart
 
-
-# Move your focus around
 bindsym $mod+$left		focus left
 bindsym $mod+$down		focus down
 bindsym $mod+$up		focus up
 bindsym $mod+$right		focus right
 
-# Alternatively, you can use the cursor keys:
 bindsym $mod+Left		focus left
 bindsym $mod+Down		focus down
 bindsym $mod+Up			focus up
 bindsym $mod+Right		focus right
 
-# Move the focused window with the same, but add Shift
 bindsym $mod+Shift+$left	move left 30
 bindsym $mod+Shift+$down	move down 30
 bindsym $mod+Shift+$up		move up 30
 bindsym $mod+Shift+$right	move right 30
 
-# Alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left		move left 30
 bindsym $mod+Shift+Down		move down 30
 bindsym $mod+Shift+Up		move up 30
 bindsym $mod+Shift+Right	move right 30
 
-# Media keys
 bindsym $mod+less 		exec --no-startup-id mpc prev
 bindsym $mod+Shift+less		exec --no-startup-id mpc seek 0%
 bindsym $mod+greater		exec --no-startup-id mpc next
 bindsym $mod+Shift+greater	exec --no-startup-id mpc toggle
 
-# For advancing forward/backward in an mpd song
 bindsym $mod+bracketleft 	exec --no-startup-id mpc seek -10
 bindsym $mod+bracketright 	exec --no-startup-id mpc seek +10
 bindsym $mod+Shift+bracketleft 	exec --no-startup-id mpc seek -60
 bindsym $mod+Shift+bracketright exec --no-startup-id mpc seek +60
 
-# PrintScreen takes a screenshot
 bindsym Print		exec flameshot gui
 
-# List open windows to switch to
 bindsym $alt+Tab		exec rofi -show window
 
-# Start start htop
 bindsym $mod+t			exec $term -e btop
 
-# Scratchpad
-# i3 has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
-# Move the currently focused window to the scratchpad
 bindsym $mod+Shift+BackSpace	move scratchpad
 
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+BackSpace		scratchpad show
 
-# Resizing containers (you can also use $mod with right mouse button for that)
 set $mode_resize "resize  "
 mode $mode_resize {
-	# These bindings trigger as soon as you enter the resize mode
-
-	# Pressing left will shrink the containers width
-	# Pressing right will grow the containers width
-	# Pressing up will shrink the containers height
-	# Pressing down will grow the containers height
 	bindsym $left		resize shrink width 10 px or 10 ppt
 	bindsym $down		resize grow height 10 px or 10 ppt
 	bindsym $up		resize shrink height 10 px or 10 ppt
 	bindsym $right		resize grow width 10 px or 10 ppt
 
-	# Same bindings, but for the arrow keys
 	bindsym Left		resize shrink width 10 px or 10 ppt
 	bindsym Down		resize grow height 10 px or 10 ppt
 	bindsym Up		resize shrink height 10 px or 10 ppt
 	bindsym Right		resize grow width 10 px or 10 ppt
 
-	# Return to default mode: Enter or Escape
 	bindsym Return		mode "default"
 	bindsym Escape		mode "default"
 }
 bindsym $mod+r		mode $mode_resize
 
-# Logout menu
 set $mode_system   [L]OCK   LOG[O]UT   [S]USPEND   [R]EBOOT   [P]OWEROFF   RESTART[I]3
 
 mode "$mode_system" {
@@ -303,18 +233,15 @@ mode "$mode_system" {
 	bindsym p exec --no-startup-id poweroff, mode "default"
 	bindsym h exec --no-startup-id sysact hibernate, mode "default"
 
-	# Exit/Reload/Restart i3
 	bindsym o		exit, mode "default"
 	bindsym i		reload, mode "default"
 	bindsym Shift+i		restart, mode "default"
 
-	# Back to normal: Enter or Escape
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
 bindsym $mod+Shift+p	mode "$mode_system"
 
-# CL[I] file manager and graphical Th[U]nar
 bindsym $mod+i exec $explorer
 
 set $freeze Distraction-free mode (super+Shift+f to reactivate bindings)
@@ -324,13 +251,9 @@ bindsym $mod+Shift+f			mode "$freeze"
 
 ###############################################################################
 # Application specific settings.
-# You can obtain WM_WINDOW_ROLE or WM_CLASS with xprop (xorg-xprop)
 ###############################################################################
-
-# Global window icons
 for_window [all]				title_window_icon padding 3px, border pixel 2
 
-# General dropdown window traits. The order can matter.
 for_window [instance="dropdown_*"]		floating enable
 for_window [instance="dropdown_*"]		move scratchpad
 for_window [instance="dropdown_*"]		sticky enable
@@ -339,13 +262,11 @@ for_window [instance="dropdown_dropdowncalc"]	resize set 800 300
 for_window [instance="dropdown_*"]		border pixel 2
 for_window [instance="dropdown_*"]		move position center
 
-# Bindings to make the webcam float and stick.
 for_window [title="mpvfloat"]			floating enable
 for_window [title="mpvfloat"]			sticky enable
 for_window [title="mpvfloat"]			border pixel 0
 no_focus   [title="mpvfloat"]
 
-# For window rules
 for_window [class="Dconf-editor"]		focus
 for_window [class="disks"]			focus
 for_window [class="GParted"]			focus
@@ -381,28 +302,20 @@ for_window [class="Anki"] floating enable, resize set 850 750, move position cen
 
 ###############################################################################
 # Extra XF86 Keys
-# These are the extra media keys that some keyboards have.
 ###############################################################################
-
-# Volume controls
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute	exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute	exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# Power
 bindsym XF86PowerOff		exec i3-nagbar -t warning -m "Shutdown computer?" -B Yes "sysact poweroff"
 bindsym XF86Reload		exec i3-nagbar -t warning -m "Restart computer?" -B Yes "sysact reboot"
 bindsym XF86Suspend		exec i3-nagbar -t warning -m "Suspend computer?" -B Yes "sysact suspend"
 
-# Brightness
 bindsym XF86MonBrightnessDown exec brightnessctl s 5%- 
 bindsym XF86MonBrightnessUp exec brightnessctl s +5%
 
-# Other
-
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces. 
 set $mode_gaps Gaps: (o) outer, (i) inner 
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global) 
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global) 
@@ -442,7 +355,5 @@ mode "$mode_gaps_outer" {
 
 ###############################################################################
 # Include directive
-# Load machine-specific configs.
 ###############################################################################
-
 include ~/.config/i3/$(uname -n).conf

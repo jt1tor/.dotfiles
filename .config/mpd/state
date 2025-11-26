@@ -1,10 +1,10 @@
-sw_volume: 52
+sw_volume: 100
 audio_device_state:1:MPD - PipeWire
 audio_device_state:1:toggle_visualizer
-state: pause
-current: 1
-time: 11.907
-random: 1
+state: play
+current: 56
+time: 120.218
+random: 0
 repeat: 1
 single: 0
 consume: 0
@@ -13,6 +13,100 @@ mixrampdb: 0
 mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
-0:Bunka/03 - Dramaturgy.flac
-1:Bunka/05 - Anoko Secret.flac
+0:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/01. Wake Up Mr. West.flac
+1:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/02. Heard 'Em Say (ft. Adam Levine).flac
+2:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/03. Touch the Sky (ft. Lupe Fiasco).flac
+3:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/04. Gold Digger (ft. Jamie Foxx).flac
+4:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/05. Skit #1.flac
+5:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/06. Drive Slow (ft. Paul Wall & GLC).flac
+6:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/07. My Way Home.flac
+7:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/08. Crack Music (ft. The Game).flac
+8:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/09. Roses.flac
+9:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/10. Bring Me Down (ft. Brandy).flac
+10:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/11. Addiction.flac
+11:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/12. Skit #2.flac
+12:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/13. Diamonds from Sierra Leone (Remix) [ft. Jay-Z].flac
+13:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/14. We Major (ft. Nas & Really Doe).flac
+14:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/15. Skit #3.flac
+15:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/16. Hey Mama.flac
+16:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/17. Celebration.flac
+17:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/18. Skit #4.flac
+18:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/19. Gone (ft. Consequence & Cam'ron).flac
+19:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/20. Diamonds from Sierra Leone.flac
+20:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/21. Back to Basics (ft. Common).flac
+21:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/22. We Can Make It Better.flac
+22:2005.08 - Late Registration (Australian Tour Edition) [AU - 9853447]/23. Late.flac
+23:2008 - 808s & Heartbreak/01 - Say You Will.flac
+24:2008 - 808s & Heartbreak/02 - Welcome to Heartbreak.flac
+25:2008 - 808s & Heartbreak/03 - Heartless.flac
+26:2008 - 808s & Heartbreak/04 - Amazing.flac
+27:2008 - 808s & Heartbreak/05 - Love Lockdown.flac
+28:2008 - 808s & Heartbreak/06 - Paranoid.flac
+29:2008 - 808s & Heartbreak/07 - RoboCop.flac
+30:2008 - 808s & Heartbreak/08 - Street Lights.flac
+31:2008 - 808s & Heartbreak/09 - Bad News.flac
+32:2008 - 808s & Heartbreak/10 - See You in My Nightmares.flac
+33:2008 - 808s & Heartbreak/11 - Coldest Winter.flac
+34:2008 - 808s & Heartbreak/12 - Pinocchio Story (freestyle live from Singapore).flac
+35:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/Tidal Animated Cover (1280x1280).mp4
+36:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/01 - Dark Fantasy.flac
+37:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/02 - Gorgeous.flac
+38:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/03 - POWER.flac
+39:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/04 - All of the Lights (Interlude).flac
+40:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/05 - All of the Light.flac
+41:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/06 - Monster.flac
+42:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/07 - So Appalled.flac
+43:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/08 - Devil in a New Dress.flac
+44:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/09 - Runaway.flac
+45:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/10 - Hell of a Life.flac
+46:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/11 - Blame Game.flac
+47:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/12 - Lost in the World.flac
+48:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/13 - Who Will Survive in America.flac
+49:2010 - My Beautiful Dark Twisted Fantasy [FLAC 16Bit-44.1kHz]/14 - See Me Now.flac
+50:2013 - Yeezus/01 - On Sight.flac
+51:2013 - Yeezus/02 - Black Skinhead.flac
+52:2013 - Yeezus/03 - I Am A God.flac
+53:2013 - Yeezus/04 - New Slaves.flac
+54:2013 - Yeezus/05 - Hold My Liquor (feat. Chief Keef & Justin Vernon).flac
+55:2013 - Yeezus/06 - I'm In It.flac
+56:2013 - Yeezus/07 - Blood On The Leaves.flac
+57:2013 - Yeezus/08 - Guilt Trip (feat. Kid Cudi).flac
+58:2013 - Yeezus/09 - Send It Up (feat. King L).flac
+59:2013 - Yeezus/10 - Bound 2.flac
+60:Kanye West - Graduation [UICD-9040]/01 - Good Morning.flac
+61:Kanye West - Graduation [UICD-9040]/02 - Champion.flac
+62:Kanye West - Graduation [UICD-9040]/03 - Stronger.flac
+63:Kanye West - Graduation [UICD-9040]/04 - I Wonder.flac
+64:Kanye West - Graduation [UICD-9040]/05 - Good Life (feat. T-Pain).flac
+65:Kanye West - Graduation [UICD-9040]/06 - Can't Tell Me Nothing.flac
+66:Kanye West - Graduation [UICD-9040]/07 - Barry Bonds (feat. Lil Wayne).flac
+67:Kanye West - Graduation [UICD-9040]/08 - Drunk & Hot Girls (feat. Mos Def).flac
+68:Kanye West - Graduation [UICD-9040]/09 - Flashing Lights (feat. Dwele).flac
+69:Kanye West - Graduation [UICD-9040]/10 - Everything I Am (feat. Scratches By DJ Premier).flac
+70:Kanye West - Graduation [UICD-9040]/11 - The Glory.flac
+71:Kanye West - Graduation [UICD-9040]/12 - Homecoming.flac
+72:Kanye West - Graduation [UICD-9040]/13 - Big Brother.flac
+73:Kanye West - Graduation [UICD-9040]/14 - Good Night (feat. Al Be Back & Mos Def) (Bonus Track).flac
+74:Kanye West - Graduation [UICD-9040]/15 - Bittersweet Poetry (feat. John Mayer) (Bonus Track).flac
+75:The College Dropout/01 Intro.flac
+76:The College Dropout/02 We Don't Care.flac
+77:The College Dropout/03 Graduation Day.flac
+78:The College Dropout/04 All Falls Down.flac
+79:The College Dropout/05 I'll Fly Away.flac
+80:The College Dropout/06 Spaceship.flac
+81:The College Dropout/07 Jesus Walks.flac
+82:The College Dropout/08 Never Let Me Down.flac
+83:The College Dropout/09 Get Em High.flac
+84:The College Dropout/10 Workout Plan.flac
+85:The College Dropout/11 The New Workout Plan.flac
+86:The College Dropout/12 Slow Jamz.flac
+87:The College Dropout/13 Breathe In Breathe Out.flac
+88:The College Dropout/14 School Spirit Skit 1.flac
+89:The College Dropout/15 School Spirit.flac
+90:The College Dropout/16 School Spirit Skit 2.flac
+91:The College Dropout/17 Lil Jimmy Skit.flac
+92:The College Dropout/18 Two Words.flac
+93:The College Dropout/19 Through the Wire.flac
+94:The College Dropout/20 Family Business.flac
+95:The College Dropout/21 Last Call.flac
 playlist_end
